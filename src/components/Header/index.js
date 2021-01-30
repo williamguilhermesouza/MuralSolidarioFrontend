@@ -2,6 +2,8 @@ import './style.css';
 
 export default function Header() {
     return(
-        <p>header</p>
+        <div className="header">
+            <p>header</p>
+        </div>
     );
 };
