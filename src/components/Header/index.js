@@ -2,8 +2,10 @@ import './style.css';
 
 export default function Header() {
     return(
-        <div className="header">
-            <p>header</p>
-        </div>
+        <nav className="header">
+            <a href="#">Como funciona?</a>
+            <a href="#">Criar novo anúncio</a>
+            <a href="#">Apagar anúncio</a>
+        </nav>
     );
 };

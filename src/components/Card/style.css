@@ -1,7 +1,12 @@
 .card {
-    background-color: aliceblue;
-    width: 250px;
-    height: 400px;
-    border-radius: 10px;
+    background-image: url('../../assets/postit.png');
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 320px;
     margin: 0 15px 0 15px;
+}
+
+.content {
+    margin-top: 80px;
 }

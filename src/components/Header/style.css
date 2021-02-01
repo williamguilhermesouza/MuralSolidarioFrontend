@@ -1,5 +1,16 @@
 .header {
-    background-color: aliceblue;
+    background-color: #7a490d;
+    display: flex;
+    justify-content: space-between;
     height: 80px;
     margin-bottom: 20px;
+    padding: 0 50px 0 50px;
+}
+
+.header a {
+    text-decoration: none;
+    margin: 30px;
+    background-color: #e6ed28;
+    border-radius: 7px;
+    padding-bottom: 9px;
 }
