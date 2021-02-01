@@ -1,16 +1,16 @@
 .header {
-    background-color: #7a490d;
+    background-image: linear-gradient(to right, #ddd, #555);
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 40px;
     margin-bottom: 20px;
     padding: 0 50px 0 50px;
 }
 
 .header a {
     text-decoration: none;
-    margin: 30px;
-    background-color: #e6ed28;
-    border-radius: 7px;
-    padding-bottom: 9px;
+    margin-top: 10px;
+    padding: 0 15px 0 15px;
+    background-image: linear-gradient(to bottom, #6ffc03, #409100) ;
+    border-radius: 0 15px 0 0;
 }
