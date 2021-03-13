@@ -1,12 +1,14 @@
 .card {
-    background-image: url('../../assets/postit.png');
-    background-position: center;
-    background-size: cover;
+    background-color: #eee;
     width: 300px;
-    height: 320px;
-    margin: 0 15px 0 15px;
+    margin: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow:3px 2px 5px #555;
+    margin-left: 50px;
 }
 
-.content {
-    margin-top: 80px;
+.card img {
+    width: 300px;
+    height: 280px;
 }
