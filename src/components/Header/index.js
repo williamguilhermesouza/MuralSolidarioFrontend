@@ -1,11 +1,13 @@
 import './style.css';
+import Button from '../Button';
+import logo from '../../assets/logo.jpeg';
 
 export default function Header() {
     return(
         <nav className="header">
-            <a href="#">Como funciona?</a>
-            <a href="#">Criar novo anúncio</a>
-            <a href="#">Apagar anúncio</a>
+            <Button text="Como funciona?" />
+            <img src={logo} alt="logo" />
+            <Button text="Novo anúncio" />
         </nav>
     );
 };
