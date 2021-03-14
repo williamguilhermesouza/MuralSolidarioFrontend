@@ -1,6 +1,8 @@
 .App {
   background-color: #ddd;
   position: absolute;
+  min-width: 730px;
+  min-height: 607px;
   width: 100%;
   height: 100%;
   font-family: 'Roboto', sans-serif;
