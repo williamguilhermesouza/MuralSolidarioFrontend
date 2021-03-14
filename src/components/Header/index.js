@@ -1,13 +1,13 @@
 import './style.css';
-import Button from '../Button';
+import HamburgerMenu from '../HamburgerMenu';
 import logo from '../../assets/logo.jpeg';
 
 export default function Header() {
     return(
         <nav className="header">
-            <Button text="Como funciona?" />
+            <HamburgerMenu />
             <img src={logo} alt="logo" />
-            <Button text="Novo anúncio" />
+            <div></div>
         </nav>
     );
 };

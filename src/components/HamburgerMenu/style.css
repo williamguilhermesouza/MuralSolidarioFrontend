@@ -1,0 +1,71 @@
+.closed {
+    background-color: #ddd;
+    width: 40px;
+    height: 45px;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 4px 2px 0 12px;
+    transition: 0.4s;
+    box-shadow:3px 2px 5px #555;
+
+}
+
+.open {
+    background-color: #ddd;
+    height: 180px;
+    width: 250px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 4px 2px 0 12px;
+    transition: 0.4s;
+    border: 1px solid #ddd;
+    z-index: 0;
+    box-shadow:3px 2px 5px #555;
+
+}
+
+.closed .menu {
+    visibility: hidden;
+}
+
+.open .menu {
+    visibility: visible;
+    list-style: none;
+}
+
+li {
+    margin: -5px 0 20px -12px;
+}
+
+a {
+    text-decoration: none;
+    color: #333; 
+    font-size: 15pt;   
+}
+
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
