@@ -61,7 +61,13 @@ export default function HamburgerMenu() {
                 </ul>
             </div>
             <Modal title="Novo anúncio" show={newModal} close={newHandle}>
-
+                <form action="#" method="post">
+                    <input name="nome" placeholder="Digite seu nome"></input>
+                    <input name="phone" placeholder="Digite seu telefone para contato"></input>
+                    <input name="address" placeholder="Digite seu endereço"></input>
+                    <textarea name="description" placeholder="Digite uma descrição para o anúncio" ></textarea>
+                    <input name="image" type="file" accept="image/*" placeholder="Escolha uma imagem para o anúncio" alt="chooseImage"></input>
+                </form>
             </Modal>
             <Modal title="Como funciona" show={howModal} close={howHandle}>
                 <p>
@@ -71,8 +77,10 @@ export default function HamburgerMenu() {
                 </p>
             </Modal>
             <Modal title="Remover um anúncio" show={delModal} close={delHandle}>
-                <p>Digite o código do anúncio abaixo:</p>
-                <input name="del-id"></input>
+                <form action="#" method="get">
+                    <p>Digite o código do anúncio abaixo:</p>
+                    <input name="del-id" placeholder="Ex.: 8b2a4eef-a4b9-4ae1-9890-442122054416"></input>
+                </form>
             </Modal>
         </>
     );

@@ -27,4 +27,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: justify;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form input, textarea, p {
+    margin: 10px;
+    resize: none;
 }
