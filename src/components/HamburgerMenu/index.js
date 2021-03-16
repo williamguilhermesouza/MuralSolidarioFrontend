@@ -44,7 +44,7 @@ export default function HamburgerMenu() {
         setDelModal(!delModal);
     }
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
         let formData = new FormData();
         formData.append('nome', name);
@@ -52,11 +52,13 @@ export default function HamburgerMenu() {
         formData.append('contato', phone);
         formData.append('descricao', description);
         formData.append('img', image);
-        BackendAPI.post('/ad/new', formData,{
+        let response = await BackendAPI.post('/ad/new', formData,{
             headers: {
                 'content-type': 'multipart/form-data'
             }
         });
+        alert(`A id do seu anúncio é: ${response.data._id}. Guarde esse código caso precise apagar o anúncio.`);
+        window.location.reload();
     }
 
     return(

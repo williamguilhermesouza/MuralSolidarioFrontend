@@ -27,11 +27,7 @@ export default function Main() {
     return(
         <div className="main">
             <Header />
-            <Card img={dogua} endereco="Rua ze das couves 30 - barra mansa, RJ" contato="21 9999999999" nome="Fulano de Tal"
-                descricao="    No entanto, não podemos esquecer que o 
-                    acompanhamento das preferências de consumo afeta positivamente a correta previsão 
-                    das condições inegavelmente apropriadas.
-                "/>
+
             {ads && ads.map((ad, i) => (
                 <Card 
                     key={ad._id}
