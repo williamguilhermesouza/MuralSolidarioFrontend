@@ -1,12 +1,14 @@
 import './style.css';
 import React, {useState} from 'react';
 import Modal from '../Modal';
+import BackendAPI from '../../services/BackendAPI';
 
 export default function HamburgerMenu() {
     let visible = false;
     let [newModal, setNewModal] = useState(false);
     let [howModal, setHowModal] = useState(false);
     let [delModal, setDelModal] = useState(false);
+    let name, phone, address, description, image = '';
     
     function toggleMenu() {
         let bar1 = document.getElementById('bar1');
@@ -42,6 +44,21 @@ export default function HamburgerMenu() {
         setDelModal(!delModal);
     }
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        let formData = new FormData();
+        formData.append('nome', name);
+        formData.append('endereco', address);
+        formData.append('contato', phone);
+        formData.append('descricao', description);
+        formData.append('img', image);
+        BackendAPI.post('/ad/new', formData,{
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        });
+    }
+
     return(
         <>
             <div  className="closed" id="hamburger-menu" onClick={toggleMenu}>
@@ -61,12 +78,13 @@ export default function HamburgerMenu() {
                 </ul>
             </div>
             <Modal title="Novo anúncio" show={newModal} close={newHandle}>
-                <form action="#" method="post">
-                    <input name="nome" placeholder="Digite seu nome"></input>
-                    <input name="phone" placeholder="Digite seu telefone para contato"></input>
-                    <input name="address" placeholder="Digite seu endereço"></input>
-                    <textarea name="description" placeholder="Digite uma descrição para o anúncio" ></textarea>
-                    <input name="image" type="file" accept="image/*" placeholder="Escolha uma imagem para o anúncio" alt="chooseImage"></input>
+                <form onSubmit={handleSubmit}>
+                    <input name="nome" placeholder="Digite seu nome" onChange={(e) => name = e.target.value}></input>
+                    <input name="phone" placeholder="Digite seu telefone para contato" onChange={(e) => phone = e.target.value}></input>
+                    <input name="address" placeholder="Digite seu endereço" onChange={(e) => address = e.target.value}></input>
+                    <textarea name="description" placeholder="Digite uma descrição para o anúncio" onChange={(e) => description = e.target.value}></textarea>
+                    <input name="image" type="file" accept="image/*" placeholder="Escolha uma imagem para o anúncio" alt="chooseImage" onChange={(e) => {image = e.target.files[0]}}></input>
+                    <button type="submit">Enviar</button>
                 </form>
             </Modal>
             <Modal title="Como funciona" show={howModal} close={howHandle}>

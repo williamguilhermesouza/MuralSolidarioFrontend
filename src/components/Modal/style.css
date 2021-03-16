@@ -39,3 +39,8 @@
     margin: 10px;
     resize: none;
 }
+
+.modal button {
+    width: 80px;
+    align-self: center;
+}
