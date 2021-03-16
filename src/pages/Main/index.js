@@ -3,7 +3,6 @@ import Header from '../../components/Header';
 import Card from '../../components/Card';
 import BackendAPI from '../../services/BackendAPI';
 import { useEffect, useState } from 'react';
-import dogua from '../../assets/dogua.png';
 
 export default function Main() {
     let [ads, setAds] = useState();
@@ -28,16 +27,18 @@ export default function Main() {
         <div className="main">
             <Header />
 
-            {ads && ads.map((ad, i) => (
-                <Card 
-                    key={ad._id}
-                    img={`data:image/jpeg;base64,${arrayBufferToBase64(ad.img.data.data)}`}
-                    endereco={ad.endereco}
-                    contato={ad.contato}
-                    nome={ad.nome}
-                    descricao={ad.descricao}
-                />
-            ))}
+            <div className="ads">
+                {ads && ads.map((ad, i) => (
+                    <Card 
+                        key={ad._id}
+                        img={`data:image/jpeg;base64,${arrayBufferToBase64(ad.img.data.data)}`}
+                        endereco={ad.endereco}
+                        contato={ad.contato}
+                        nome={ad.nome}
+                        descricao={ad.descricao}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
