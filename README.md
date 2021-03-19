@@ -1,5 +1,8 @@
 # Mural Solidário Frontend
 
+![Repo-size](https://img.shields.io/github/repo-size/williamguilhermesouza/MuralSolidarioFrontend)
+![Last-commit](https://img.shields.io/github/last-commit/williamguilhermesouza/MuralSolidarioFrontend)
+
 This project is meant to be the frontend of a web application that has the target of being a space where charity institutions may post their needs
 and receive donations. The application means to be as simple as possible, exposing for every request an image, a name (of the instituion or the person thats
 posting) a description, a contact and the address.
